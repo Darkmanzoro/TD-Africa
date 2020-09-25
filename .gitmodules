@@ -1,0 +1,4 @@
+[submodule "Flutterwave/Rave"]
+	path = Flutterwave/Rave
+	url = git@github.com:Flutterwave/Rave.git
+	branch = master
