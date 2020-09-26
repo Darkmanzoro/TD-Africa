@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="QRButton">
+    
+        <div class='control-button qr_barcode'>
+                <a style="color:#000;display:block;" class="btn btn-primary start_barcode" id="js_id_sh_sale_barcode_mobile_start_btn">
+                	<i class='fa fa-barcode' />
+                	Start
+                </a>
+                <a style="display:none;color:#000;" class="btn btn-danger stop_barcode" id="js_id_sh_sale_barcode_mobile_reset_btn">
+                    <i class='fa fa-barcode' />
+                	Stop
+                </a>
+        </div>
+    </t>
+     <t t-extend="ProductListWidget">
+        <t t-jquery=".product-list" t-operation="after">
+            <div class="camera-list">
+            
+            <section class="oe_edit_only" attrs="{'invisible': [('state', 'in', ['cancel','done'] )]}">
+
+            <div id="js_id_sh_sale_barcode_mobile_vid_div" style="display:none;">
+            
+		  		<group style="margin-bottom: 10px;">
+						<div class="form-group row" style="margin-bottom:0px;">
+	 					<strong style="align-self: center;font-size:15px;" class="col-3">Camera</strong>
+	          				<select class="col-8 form-control" id="js_id_sh_sale_barcode_mobile_cam_select">
+	             			</select>
+						</div>	
+		         </group>
+
+                <video id="video" class="cls_sh_all_in_one_mbs_video_tag" width="600" height="500" style="border: 1px solid gray"></video>
+                
+  			</div>
+
+        </section>       
+        
+            </div>
+        </t>
+    </t>
+
+</templates>
